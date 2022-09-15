@@ -221,12 +221,10 @@ public class RectGrid_Viz : MonoBehaviour
         if (!cell.rgc.isWalkable)
         { 
             cell.SetInnerColor(cell.nonWalkableCol);
-            cell.preHoverColor = cell.nonWalkableCol;
         }
         else 
         { 
             cell.ResetColor();
-            cell.preHoverColor = cell.startCol;
         }
     }
 

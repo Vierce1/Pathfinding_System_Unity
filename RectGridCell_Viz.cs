@@ -20,12 +20,13 @@ public class RectGridCell_Viz : MonoBehaviour
     // Good to leave in for testing though
     public Color startCol;
     public Color starterOuterCol;
-
+    public Color nonWalkableCol;
 
     private void Start()
     {
         startCol = innerSprite.color;
         starterOuterCol = outerSprite.color;
+        nonWalkableCol = Color.red;
     }
     
     //comment out Update if you don't
