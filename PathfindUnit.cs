@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using Pathfinding;
 
 //attach this to a GameObject to make it pathfind
-public class PathfindUnit
+public class PathfindUnit : MonoBehaviour
 {
 
     ///add these to the unit's initialization function
@@ -19,7 +22,7 @@ public class PathfindUnit
     public bool reachedWaypoint = false;
     public bool unitCurrentlyMoving = false;
     public List<Vector3Int> previousPathCells = new List<Vector3Int>(); //add cells to this as generate paths. whether final destination is good or not
-
+    public bool finishedPathFinding = true;
 
     //Call this in Update() when (pathFinder.Status != PathFinderStatus.RUNNING && !unitCurrentlyMoving)
     //Get goalLocation as a RectGridCell by calling RectGrid_Viz.GetRGC(Vector3Int, 0, Vector3Int)
